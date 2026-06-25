@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Add animation classes to elements on scroll using Intersection Observer
-    const animatedElements = document.querySelectorAll('.hero-content > *, .hero-image-wrapper, .skill-category-card, .project-card');
+    const animatedElements = document.querySelectorAll('.hero-content > *, .hero-image-wrapper, .skill-category-card, .project-card, .achievement-card');
     
     // Add delay classes sequentially
     const heroElements = document.querySelectorAll('.hero-content > *');
@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                if (entry.target.classList.contains('skill-category-card') || entry.target.classList.contains('project-card')) {
+                if (entry.target.classList.contains('skill-category-card') || entry.target.classList.contains('project-card') || entry.target.classList.contains('achievement-card')) {
                     entry.target.classList.add('animate-up');
                 } else if (entry.target.classList.contains('hero-image-wrapper')) {
                     entry.target.classList.add('animate-up');
